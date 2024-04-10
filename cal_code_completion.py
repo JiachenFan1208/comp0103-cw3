@@ -2,22 +2,22 @@ import os
 from fuzzywuzzy import fuzz
 import numpy as np
 
-# 定义文件夹路径
+# Define the folder path
 folder_path = os.path.join(os.getcwd(), "mutation")
 # print(folder_path)
 
-# 获取文件列表
-file_list = os.listdir(folder_path)
+# Get the list of Java files in the folder
+file_list = [file for file in os.listdir(folder_path) if file.endswith(".java") and file != ".gitkeep"]
 
 def calculate_completion(file_list, T = len(file_list)-1):
 
     outliers = []
 
-    # 初始化相似度矩阵
+    # Initialize the similarity matrix
     num_files = len(file_list)
     similarity_matrix = [[0]*num_files for _ in range(num_files)]
 
-    # 计算相似度矩阵
+    # Calculate the similarity matrix
     for i in range(num_files):
         for j in range(i, num_files):
             file1_path = os.path.join(folder_path, file_list[i])

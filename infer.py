@@ -55,7 +55,7 @@ def run_infer(java_file_path):
             # Get the command output
             stdout, stderr = process.communicate()
 
-            # # 打印标准错误
+            # # Print standard error
             # print("Standard Error:", stderr.decode())
 
             # Get the content of the response
@@ -138,7 +138,7 @@ def run_infer(java_file_path):
             # Get the command output
             stdout, stderr = process.communicate()
 
-            # # 打印标准错误
+            # # Print standard error
             # print("Standard Error:", stderr.decode())
 
             # Get the content of the response
