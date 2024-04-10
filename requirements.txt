@@ -1,0 +1,4 @@
+fuzzywuzzy==0.18.0
+numpy==1.26.4
+ollama==0.1.8
+Requests==2.31.0
